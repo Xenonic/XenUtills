@@ -68,4 +68,39 @@ pub fn main() !void {
     } else {
         print("square root does not work with i8", .{});
     }
+    var au8: u8 = 2;
+    var bu8: u8 = 2;
+    var cu8: u8 = undefined;
+    var af32: f32 = 2;
+    var bf32: f32 = 2;
+    var cf32: f32 = undefined;
+    var ai8: i8 = 2;
+    var bi8: i8 = 2;
+    var ci8: i8 = undefined;
+    math.pthag(u8, au8, bu8, cu8);
+    math.pthag(f32, af32, bf32, cf32);
+    math.pthag(i8, ai8, bi8, ci8);
+    if (cu8 == 2) {
+        print("pythagrean works with u8", .{});
+    } else {
+        print("pythagrean does not work with u8", .{});
+    }
+    if (cf32 == 8) {
+        print("pythagrean works with f32", .{});
+    } else {
+        print("pythagrean does not work with f32", .{});
+    }
+    if (ci8 == 8) {
+        print("pythagrean works with i8", .{});
+    } else {
+        print("pythagrean does not work with i8", .{});
+    }
+    var lengthtest = [*:0]u8{ "H", "e", "l", "l", "o" };
+    var lengthval: u8 = undefined;
+    Utills.len(u8, lengthtest, lengthval);
+    if (lengthval == 5) {
+        print("len function works", .{});
+    } else {
+        print("len does not work", .{});
+    }
 }
