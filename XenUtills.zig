@@ -1,10 +1,11 @@
 const std = @import("std");
 
-pub fn len(T: type, array: [*:0]T) !T {
+pub fn len(T: type, array: [*:0]T, val: T) T {
     var length: T = 1;
     while (true) {
         if (array[length] == null) {
-            break length;
+            val = length;
+            return val;
         } else {
             length += 1;
         }
